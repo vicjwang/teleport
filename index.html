@@ -1,0 +1,648 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Facebook Open Graph Meta Tags -->
+
+    <meta property="og:title" content="Teleport: Get your friends delivered" />
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="https://teleportapp.co" />
+    <meta property="og:image" content="{% static "img/social/fb01.png" %}" />
+    <meta property="og:description" content="Get your friends delivered in one tap. It's like magic, but more science-y." />
+
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:site" content="@getteleportapp">
+
+    <!-- Open Graph Meta Tags by: www.MetaTagGenerator.org -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static "apple-icon-57x57.png" %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static "apple-icon-60x60.png" %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "apple-icon-72x72.png" %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "apple-icon-76x76.png" %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "apple-icon-114x114.png" %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static "apple-icon-120x120.png" %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static "apple-icon-144x144.png" %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static "apple-icon-152x152.png" %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "apple-icon-180x180.png" %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static "android-icon-192x192.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static "favicon-96x96.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "manifest.json" %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static "ms-icon-144x144.png" %}">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Teleport: Get your friends delivered</title>
+
+    <link href="{% static "css/index.css" %}" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="overlay">
+      <div class="intro__modal">
+        <img id="intro__modal_close_icon" src="{% static "img/icon_close.svg" %}" />
+        {% include "mailchimp_signup_form.html" with id="intro__business_sign_up_form" title="Teleport Business Beta" description="Interested in being a part of Teleport's Business Beta? Leave your information here, and we'll reach out to you when it's ready." field2="Name" field3="Industry" action="//teleportapp.us12.list-manage.com/subscribe/post?u=cf9eceb89897d553f4db19694&amp;id=2f0c2138d6" bot_name="b_cf9eceb89897d553f4db19694_2f0c2138d6" %}
+
+        {% include "mailchimp_signup_form.html" with id="intro__android_sign_up_form" title="Android Mailing List" description="Subscribe to the Android mailing list to be the first to find out when Teleport releases its Android version!" field2="First name" field3="Last name" action="//teleportapp.us12.list-manage.com/subscribe/post?u=cf9eceb89897d553f4db19694&amp;id=71f40c8a38" bot_name="b_cf9eceb89897d553f4db19694_71f40c8a38" %}
+      </div>
+    </div>
+
+    <div id="preload">
+      <div class="preload__logo">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 120 136" style="enable-background:new 0 0 120 136;" xml:space="preserve">
+        <style type="text/css">
+          .st1{fill:none;stroke:#00FCA6;stroke-width:8;stroke-linejoin:round;stroke-miterlimit:10;}
+        </style>
+        <g class="st0">
+          <g>
+            <g>
+              <polygon class="st1" points="116,99.8 60,131.7 4,99.8 4,36.2 60,4.3 116,36.2      "/>
+            </g>
+          </g>
+        </g>
+        </svg>
+      </div>
+    </div>
+
+    <section id="intro" class="section-dark focus">
+    <div class="intro__bg">
+      <div class="intro__bg-1"></div>
+      <div class="intro__bg-2"></div>
+      <div class="intro__bg-3"></div>
+      <div class="intro__bg-cover"></div>
+    </div>
+    <div class="intro__planet"></div>
+    <div class="intro__arrow">Keep scrolling</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-2">
+          <h1>
+            <a href="#" class="logo">Teleport</a>
+          </h1>
+        </div> <!-- /col -->
+        <div class="col-xs-10">
+          <ul>
+            <li class="intro__faq"><a href="#">FAQ</a></li>
+            <li><a href="https://www.teleportapp.co/privacy">Privacy policy</a></li>
+            <li><a href="mailto:support@teleportapp.co">Contact us</a></li>
+            <li><a href="https://itunes.apple.com/app/apple-store/id1010768272?pt=107552801&ct={{ referrer }}&mt=8">Download now</a></li>
+          </ul>
+          <a href="#" class="intro__menutoggle">Toggle menu</a>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+      <div class="row vertical-align">
+        <div class="col-sm-6">
+          <div class="intro__demo">
+            <div class="intro__ui"></div>
+            <div class="intro__touch"></div>
+          </div>
+        </div> <!-- /col -->
+        <div class="col-sm-6" id="intro__main-text">
+          <h2>Get Your Friends Delivered</h2>
+          <p>One tap sends an Uber to their location.</p>
+          <div id="intro__actions">
+            <p><a href="https://itunes.apple.com/app/apple-store/id1010768272?pt=107552801&ct={{ referrer }}&mt=8" class="button button-apple">Get the app</a></p>
+            <div id="intro__sign_up_links">
+              <a href="#" class="intro__android" id="intro__android">On Android?</a>
+              <a href="#" id="intro__business">For Business?</a>
+            </div>
+          </div>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div><!-- /container -->
+    </section>
+
+    <section id="tutorial" class="focus">
+        <a class="tutorial__paginator-next" href="#">Next</a>
+        <a class="tutorial__paginator-prev hidden" href="#">Previous</a>
+
+      <div class="tutorial__progress">
+        <ul>
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="tutorial__planets">
+        <div class="tutorial__planets-saturn"></div>
+        <div class="tutorial__planets-phone"></div>
+        <div class="tutorial__planets-moon"></div>
+        <div class="tutorial__planets-mars"></div>
+      </div>
+
+      <div class="container">
+        <div class="row"></div>
+        <div class="row tutorial__content tutorial__content-1 active">
+          <div class="col-xs-2">
+          </div>
+          <div class="col-xs-8 center">
+            <div class="tutorial__content-inner vertical-align">
+              <div>
+                <div class="tutorial__illustration">
+                  <svg />
+                </div>
+                <h2>
+                  Teleport is a fun tool to help you and your friends hang out.
+                </h2>
+              </div>
+            </div>
+          </div><!-- /col -->
+        </div> <!-- /row -->
+
+        <div class="row tutorial__content tutorial__content-2 next">
+          <div class="col-xs-2">
+          </div>
+          <div class="col-xs-8 center">
+            <div class="tutorial__content-inner vertical-align"><div>
+            <h2>
+              Tap a friend’s name to Teleport them to your location. They don’t even need to have the app to accept. Really.
+            </h2>
+            </div></div>
+          </div><!-- /col -->
+        </div> <!-- /row -->
+
+
+        <div class="row tutorial__content tutorial__content-3 prev">
+          <div class="col-xs-2">
+          </div>
+          <div class="col-xs-8 center">
+            <div class="tutorial__content-inner vertical-align"><div>
+
+              <img class="tutorial__3-location" src="{% static "img/tutorial__3-location@2x.png" %}" width="46" />
+              <img class="tutorial__3-destination" src="{% static "img/tutorial__3-destination@2x.png" %}"  width="46" />
+              <h2>
+                An Uber will pick them up and bring them to you.
+              </h2>
+
+              <a href="https://itunes.apple.com/app/apple-store/id1010768272?pt=107552801&ct={{ referrer }}&mt=8" class="button button-apple">Get the app</a>
+            </div></div>
+          </div><!-- /col -->
+        </div> <!-- /row -->
+
+
+      </div><!-- /container -->
+
+    </section>
+
+
+    <section id="press" class="focus section-dark">
+    <div class="container">
+      <div class="row center">
+        <div class="col-sm-12">
+          <div class="press__quotes slideshow">
+            <a class="slideshow__paginator-next" href="#">Next</a>
+            <a class="slideshow__paginator-prev" href="#">Previous</a>
+            <div class="active slideshow__child">
+              <h1>We used this today to transport a family member who doesn't drive to and from a doctor's appointment. So much better than taking two hours off work to drive her myself!!</h1>
+              <p>by write2krissy via the App Store</p>
+            </div>
+            <div class="slideshow__child">
+              <h1>“Teleportation is real! Push a button to have your friends delivered to you.”</h1>
+              <p><a href='https://twitter.com/sacca/status/669190251391221760'>Chris Sacca (via Twitter)</a></p>
+            </div>
+            <div class="slideshow__child">
+              <h1>“…There’s an app for that. It’s called Teleport, and if you ask me, it’s pretty genius.”</h1>
+              <p><a href="http://elitedaily.com/envision/send-friends-uber-rides-teleport/1299271/">Elite Daily</a></p>
+            </div>
+            <div class="slideshow__child">
+              <h1>“OUT. OF. THIS. WORLD. COOL.”</h1>
+              <p><a href="#">Ben Basche (via Twitter)</a></p>
+            </div>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="press__logo press__logo-bi"><a target="_blank" href="http://www.businessinsider.com/teleport-app-sends-an-uber-to-bring-your-friends-to-your-location-2015-11">Business Insider</a></div>
+        </div><!-- /col -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="press__logo press__logo-ud"><a target="_blank" href="http://www.urbandaddy.com/ntl/gear/36566/Teleport_Your_Friends_on_Demand_National_NTL_Application">Urban Daddy</a></div>
+        </div><!-- /col -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="press__logo press__logo-lh"><a target="_blank" href="http://lifehacker.com/teleport-on-ios-uses-uber-to-deliver-your-friends-and-f-1744507798">Lifehacker</a></div>
+        </div><!-- /col -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="press__logo press__logo-ph"><a target="_blank" href="https://www.producthunt.com/tech/teleport-app">Product Hunt</a></div>
+        </div><!-- /col -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="press__logo press__logo-ls"><a target="_blank" href="http://laughingsquid.com/teleport-a-new-app-that-works-with-uber-to-deliver-friends-to-each-other/">Laughing Squid</a></div>
+        </div><!-- /col -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="press__logo press__logo-ed"><a target="_blank" href="http://elitedaily.com/envision/send-friends-uber-rides-teleport/1299271/">Elite Daily</a></div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+    </section>
+
+    <section id="faq" class="section-grey focus">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 center">
+          <h1>FAQ</h1>
+          <input id="faq__search" name="faq__search" placeholder="Ask us anything" type="text" data-list=".faq__questions" autocomplete="off">
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+      <div class="row">
+
+        <div class='col-sm-4'>
+          <h3>General</h3>
+        </div>
+        <div class="col-sm-8">
+          <div class="faq__questions">
+            <div class="faq__question">
+              <span class="faq__q">
+                Is this really teleportation?
+              </span>
+              <span class="faq__a">
+                No, this isn’t true, sci-fi style teleportation. We tried that, but people kept arriving with an extra arm growing out of their forehead. But, until science figures out that whole forehead-arm thing, this is about as close as you’re going to get.
+              </span>
+              <span class="faq__keywords">how,works,actual,how does it work, how does the app work, how does teleport work</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                How do you know my friend’s location? Have you been tracking them for years!?
+              </span>
+              <span class="faq__a">
+                Whoa, whoa. Calm down. Your friend just drops a pin when they receive the Teleport request. That’s it.
+              </span>
+              <span class="faq__keywords">privacy, sharing, share my location,stalker</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                How is this different from using Uber directly?
+              </span>
+              <span class="faq__a">
+                <p>Well, in simple terms, it’s a whole heck of a lot easier. I mean, sure, if you wanted to, you could:</p>
+                <ul>
+                  <li>Find out where your friend is (which involves waiting for them to respond to your text, which, if you’ve got flaky friends like we do, could be 20 minutes.)</li>
+                  <li>Check if they’re ready, make sure they have pants on, et cetera.</li>
+                  <li>Text them the car type, license plate number, and driver’s name. And who doesn’t love switching multiple times between the Uber app and text to make sure you copy everything right? (The answer is no one.)</li>
+                  <li>Text them the ETA, because they definitely still haven’t put on pants.</li>
+                  <li>Text and/or call them when the car has arrived, hopefully in the right place.</li>
+                  <li>If the car isn’t right outside, enjoy jumping on an awkward conference call while you help your friend figure out just where that Camry Hybrid ended up.</li>
+                </ul>
+                <p>After all that, your friend still doesn’t know where they’re going or how long it will take. Some people love surprises, but a whole lot more don’t. Or, you know, you could just use Teleport. Eliminate all these steps, plus they’ll get a map and everything, just like a standard Uber user. Seems easier, right?</p>
+              </span>
+              <span class="faq__keywords">why,use teleport,instead,why would i,what sort,how does this work, how does it work, what is this</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                But my friend doesn’t have Teleport! Surely this must be a problem?
+              </span>
+              <span class="faq__a">
+                Nah. They don’t even need to have the app. Teleport away.
+              </span>
+              <span class="faq__keywords">who,who can i,download the app</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                But my friend doesn’t have an iPhone! I’m totally out of luck, right?
+              </span>
+              <span class="faq__a">
+                Again, nah. They’ll get a link to a web app. We thought of everything.
+              </span>
+              <span class="faq__keywords">my friend has android,my friend has microsoft phone,my friend has windows,ios,nokia,tablet,samsung</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                But my friend doesn’t use Uber. Betcha didn’t think of that, geniuses.
+              </span>
+              <span class="faq__a">
+                But we did. As before, they don’t need to have the Uber app to get Teleported. They can just use the web app we mentioned above.
+              </span>
+              <span class="faq__keywords">no uber,what if they don't have</span>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-sm-4'>
+          <h3>Using Teleport</h3>
+        </div>
+        <div class="col-sm-8">
+          <div class="faq__questions">
+            <div class="faq__question">
+              <span class="faq__q">
+                This is cool, when should I Teleport someone?
+              </span>
+              <span class="faq__a">
+                Teleport someone you haven’t seen in a while and reconnect. Teleport your tech-averse grandpa to Thanksgiving dinner. Teleport your mom to see your new apartment. Teleport your friend who’s too lazy to come out, even though it’s Friday, and that guy/girl they like is at the bar. Teleport that “special” friend to Netflix and chill. Teleport Leonard Nimoy somewhere, just because it would be funny.
+              </span>
+              <span class="faq__keywords">who uses Teleport,who can i use teleport on, what are some examples of how to use,how do i use teleport,how do i teleport,when would i use teleport,when would i teleport,when should i use teleport</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                OK, I downloaded the Teleport App. Now what?
+              </span>
+              <span class="faq__a">
+                Try sending a teleport to a friend, or add your friends who are already on the Teleport platform.
+              </span>
+              <span class="faq__keywords"></span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                Does my friend have to agree to be teleported?
+              </span>
+              <span class="faq__a">
+                Yes. Your friend has to accept the Teleport request. Otherwise, this would be “kidnapping,” which is a felony.
+              </span>
+              <span class="faq__keywords"></span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                What does my friend see when they get teleported?
+              </span>
+              <span class="faq__a">
+                They’ll see an ETA on the uber and a map to the final location. They’ll also see the driver’s name, license plate number, and driver number.
+              </span>
+              <span class="faq__keywords">what is it like to receive a teleport, receive a request, what happens when,how does this work, how does it work, do you give me your friends estimates, do you give my friend estimates of</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                Does my friend know where they are being teleported to?
+              </span>
+              <span class="faq__a">
+                Yup. They’ll see where they’re going on one of those old navigational stand-bys: a map.
+              </span>
+              <span class="faq__keywords">what is it like to receive a teleport, receive a request, what do they see when teleported, what happens when, do you tell my friend, do you give my friend</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                Can I teleport anyone from anywhere?
+              </span>
+              <span class="faq__a">
+                Within a 100 mile limit, yes. We work anywhere Uber does. Which is all around the world. But, unfortunately, your friends in Juneau, Alaska are likely out of luck. But we’re working on expanding this radius.
+              </span>
+              <span class="faq__keywords">where does this work,where does this app work,where does it work, asia, china, europe, uk, london, paris, california, new york, united states, japan, tokyo, international, overseas,what if they are not in the US,what if they are in asia</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                How do I change the expiration on my Teleports so they don’t expire?
+              </span>
+              <span class="faq__a">
+                If you tap on the side menu in the app, then tap “Settings”, there are options to select expiration times of  1 hour, 24 hours, or Never.
+              </span>
+              <span class="faq__keywords">how,expiration,expire,never,1 hour,24 hours,how to change expiration,keyboard</span>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-sm-4'>
+          <h3>Teleport Keyboard</h3>
+        </div>
+        <div class="col-sm-8">
+          <div class="faq__questions">
+            <div class="faq__question">
+              <span class="faq__q">
+                What is Teleport Keyboard App?
+              </span>
+              <span class="faq__a">
+                Teleport is a custom keyboard to send Teleport rides from any messaging app. We like to think of it as Flash Teleports! After opening the Keyboard App, tap where you would like to Teleport your friend to (to you or somewhere nearby), and hit send. It’s that simple.
+              </span>
+              <span class="faq__keywords">what is teleport keyboard,what is keyboard,keyboard,send teleport from</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                Why should I use the Keyboard App? Does it do anything different from the normal app?
+              </span>
+              <span class="faq__a">
+                It makes sending a Teleport as easy as sending a text message. Send a Teleport from your favorite messaging apps, including: iMessage, FB Messenger, WhatsApp, WeChat, Line, KakaoTalk, Tinder, Hinge, OkCupid, Slack or even email! You’ll never have to leave a conversation again to send a Teleport!
+              </span>
+              <span class="faq__keywords">keyboard,how is keyboard different,differences,vs. app</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                The keyboard app is mind-blowing and game-changing!
+              </span>
+              <span class="faq__a">
+                Yes, we agree.
+              </span>
+              <span class="faq__keywords">keyboard,mind-blowing,cool,game-changing,wow,so cool</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                Hold on, do I have to download another app to use the keyboard?
+              </span>
+              <span class="faq__a">
+                No, the keyboard app is FREE and is already part of your normal Teleport App. You do have to enable it though since it requires full access in iOS settings. Tap the side menu icon and then follow the instructions in Keyboard setup.
+              </span>
+              <span class="faq__keywords">keyboard,download,download keyboard app, do I have</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                Hmmm, now what do I do?
+              </span>
+              <span class="faq__a">
+                Send Teleports from any of your messaging services. To see the keyboard app hold down on the globe icon in any keyboard and tap on “Teleport”. It’s the same globe icon that you tap for access to emojis and different languages.
+              </span>
+              <span class="faq__keywords">what now,keyboard</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                Why can’t I type in an address or select a different location further away?
+              </span>
+              <span class="faq__a">
+                The Keyboard App wants to make it as fast and easy as possible for you to send a Teleport. It uses data from Foursquare to recommend the highest rated places near you.
+              </span>
+              <span class="faq__keywords">how,select different,select further,location,keyboard</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                I installed it, but it’s still not working!
+              </span>
+              <span class="faq__a">
+                Did you follow these instructions? Go to Settings, tap “General”, “Keyboard”, then tap on “Keyboards” again.  “Teleport” will appear as one of the keyboards, but you will need to tap “Teleport” again to enable the “Allow full access” switch.  Switch this on.
+              </span>
+              <span class="faq__keywords">not working,keyboard,disabled,can't see</span>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-sm-4'>
+          <h3>Teleport Dashboard</h3>
+        </div>
+        <div class="col-sm-8">
+          <div class="faq__questions">
+            <div class="faq__question">
+              <span class="faq__q">
+                Can you teleport multiple people at the same time? I’m throwing myself a birthday party in 25 minutes.
+              </span>
+              <span class="faq__a">
+                On the iOS app you can only send one Teleport at a time. However, we have the Teleport Dashboard that allows you to send multiple simultaneous Teleports. Interested in Teleport Dashboard? Please email team@teleportapp.co to get access.
+              </span>
+              <span class="faq__keywords">can i chain friends, multiple friends,mass,business,enterprise,teleport for business,corporation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-sm-4'>
+          <h3>Cost and Payment</h3>
+        </div>
+        <div class="col-sm-8">
+          <div class="faq__questions">
+            <div class="faq__question">
+              <span class="faq__q">
+                Who pays for the Teleport?
+              </span>
+              <span class="faq__a">
+                The sender pays for the teleport. So if you receive a Teleport, it’s free. If you send a teleport, well, you’re a great friend.
+              </span>
+              <span class="faq__keywords">do i have to pay,does my friend pay,how much does it cost,does the app cost money</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                How much does a Teleport ride cost?
+              </span>
+              <span class="faq__a">
+                It costs exactly the same as a normal Uber ride. We don't charge any additional fees. We've found that zero extra fees has proven to be, by far, people's favorite amount of extra fees.
+              </span>
+              <span class="faq__keywords"></span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                What type of Uber does Teleport send to my friend?
+              </span>
+              <span class="faq__a">
+                Once you tap on a friend to Teleport, you'll get to decide what kind of Uber to send them. Teleport supports all available Uber products, so you can send an UberBLACK to that hot date you're trying to impress, and an UberX when you just need your best friend to help you finish an overzealous buffalo wing order at the sports bar.
+              </span>
+              <span class="faq__keywords"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-sm-4'>
+          <h3>Help and Support</h3>
+        </div>
+        <div class="col-sm-8">
+          <div class="faq__questions">
+            <div class="faq__question">
+              <span class="faq__q">
+                This is so cool, do you have an Android version?
+              </span>
+              <span class="faq__a">
+                First of all, thanks for saying it’s cool. We think YOU’RE cool. As for an Android version, expect it in early 2016. Android users can still accept teleports however, so your one friend Sheila with the Samsung Galaxy isn’t stranded.
+              </span>
+              <span class="faq__keywords">i have android,i have a microsoft phone,i have windows,ios,nokia,samsung</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                Does Teleport work with Lyft or Gett?
+              </span>
+              <span class="faq__a">
+                We currently only integrate with Uber’s API. But we work anywhere Uber does. Which is all around the world.
+              </span>
+              <span class="faq__keywords">yellow cab, taxi,where does this work,where does this app work,where does it work, asia, china, europe, uk, london, paris, california, new york, united states, japan, tokyo, international, overseas,what if they are not in the US,what if they are in asia</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                When will you guys start working on time travel?
+              </span>
+              <span class="faq__a">
+                Only once we’re confident that the multiverse can handle the huge amounts of alternate timelines that time travel would create. So we’re probably at least a few months away.
+              </span>
+              <span class="faq__keywords">this is stupid</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                I forgot my password, what do I do now?
+              </span>
+              <span class="faq__a">
+                You can’t use the app anymore. Just kidding! Go <a href="https://www.teleportapp.co/accounts/recover">here</a> and get your password tattooed on you Memento-style for next time. Actually, that’s a terrible security decision. Don’t do that.
+              </span>
+              <span class="faq__keywords"></span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                I found an error and Teleport isn’t working for me. What now?
+              </span>
+              <span class="faq__a">
+                We’re sorry about the inconvenience! Shoot us an e-mail at <a href="mailto:support@teleportapp.co">support@teleportapp.co</a> and we’ll get right back to you.
+              </span>
+              <span class="faq__keywords">i have a problem, something's not working, the app is broken, i can't get, the app keeps crashing</span>
+            </div>
+            <div class="faq__question">
+              <span class="faq__q">
+                It’s a long story, but I’m trapped in the belly of a whale. Can I use Teleport to bring someone to rescue me?
+              </span>
+              <span class="faq__a">
+                How very biblical of you. Unfortunately, in addition to the fact that you’re underwater, the whale’s blubber will likely inhibit cell service. We’re pretty surprised you could even access this FAQ from in there.
+              </span>
+              <span class="faq__keywords">test</span>
+            </div>
+            <div class="faq__question faq__question-ignore">
+              <span class="faq__q">
+                I can't find the answer to my question! Help?
+              </span>
+              <span class="faq__a">
+                Shoot us an e-mail at <a href="mailto:support@teleportapp.co">support@teleportapp.co</a> and we’ll get right back to you.
+              </span>
+              <span class="faq__keywords"></span>
+            </div>
+          </div>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div><!-- /container -->
+    </section>
+
+
+    <section id="footer" class="focus section-dark">
+    <div class="container">
+      <div class="row center">
+        <div class="col-xs-12">
+          <h1>
+            <a href="#" class="logo">Teleport</a>
+          </h1>
+          <br />
+          <p>
+            <a href="https://itunes.apple.com/app/apple-store/id1010768272?pt=107552801&ct={{ referrer }}&mt=8" class="button button-apple">Get the app</a>
+          </p>
+          <br />
+          <br />
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+      <div class="row">
+        <div class="col-sm-6" style="line-height:40px">
+          &copy; 2016 All Rights Reserved.
+        </div> <!-- /col -->
+        <div class="col-sm-6">
+          <div class="socialicon-parent">
+            <a class="socialicon socialicon-tw" href="https://twitter.com/getteleportapp">Twitter</a> <a class="socialicon socialicon-in" href="https://www.instagram.com/getteleportapp/">Instagram</a> <a  class="socialicon socialicon-fb" href="https://www.facebook.com/getteleportapp">Facebook</a>
+          </div>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+    </section>
+
+		<script>
+			var staticPath = '{% static "img/" %}';
+		</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/hideseek/0.6.2/jquery.hideseek.min.js"></script>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: true"></script>
+
+    <script src="{% static "js/index.js" %}"></script>
+    <script src="{% static "js/form.js"%}"></script>
+    <script src="{% static "js/mailchimp.js" %}"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68866205-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
