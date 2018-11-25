@@ -1,4 +1,3 @@
-{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +10,7 @@
     <meta property="og:title" content="Teleport: Get your friends delivered" />
     <meta property="og:type" content="product" />
     <meta property="og:url" content="https://teleportapp.co" />
-    <meta property="og:image" content="{% static "img/social/fb01.png" %}" />
+    <meta property="og:image" content="./icons/img/social/fb01.png" />
     <meta property="og:description" content="Get your friends delivered in one tap. It's like magic, but more science-y." />
 
     <meta name="twitter:card" content="app">
@@ -19,39 +18,30 @@
 
     <!-- Open Graph Meta Tags by: www.MetaTagGenerator.org -->
 
-    <link rel="apple-touch-icon" sizes="57x57" href="{% static "apple-icon-57x57.png" %}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{% static "apple-icon-60x60.png" %}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{% static "apple-icon-72x72.png" %}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static "apple-icon-76x76.png" %}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{% static "apple-icon-114x114.png" %}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{% static "apple-icon-120x120.png" %}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{% static "apple-icon-144x144.png" %}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{% static "apple-icon-152x152.png" %}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static "apple-icon-180x180.png" %}">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{% static "android-icon-192x192.png" %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon-32x32.png" %}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{% static "favicon-96x96.png" %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon-16x16.png" %}">
-    <link rel="manifest" href="{% static "manifest.json" %}">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./icons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{% static "ms-icon-144x144.png" %}">
+    <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <title>Teleport: Get your friends delivered</title>
 
-    <link href="{% static "css/index.css" %}" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
 
   </head>
   <body>
-    <div id="overlay">
-      <div class="intro__modal">
-        <img id="intro__modal_close_icon" src="{% static "img/icon_close.svg" %}" />
-        {% include "mailchimp_signup_form.html" with id="intro__business_sign_up_form" title="Teleport Business Beta" description="Interested in being a part of Teleport's Business Beta? Leave your information here, and we'll reach out to you when it's ready." field2="Name" field3="Industry" action="//teleportapp.us12.list-manage.com/subscribe/post?u=cf9eceb89897d553f4db19694&amp;id=2f0c2138d6" bot_name="b_cf9eceb89897d553f4db19694_2f0c2138d6" %}
-
-        {% include "mailchimp_signup_form.html" with id="intro__android_sign_up_form" title="Android Mailing List" description="Subscribe to the Android mailing list to be the first to find out when Teleport releases its Android version!" field2="First name" field3="Last name" action="//teleportapp.us12.list-manage.com/subscribe/post?u=cf9eceb89897d553f4db19694&amp;id=71f40c8a38" bot_name="b_cf9eceb89897d553f4db19694_71f40c8a38" %}
-      </div>
-    </div>
-
     <div id="preload">
       <div class="preload__logo">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -175,8 +165,8 @@
           <div class="col-xs-8 center">
             <div class="tutorial__content-inner vertical-align"><div>
 
-              <img class="tutorial__3-location" src="{% static "img/tutorial__3-location@2x.png" %}" width="46" />
-              <img class="tutorial__3-destination" src="{% static "img/tutorial__3-destination@2x.png" %}"  width="46" />
+              <img class="tutorial__3-location" src="img/tutorial__3-location@2x.png" width="46" />
+              <img class="tutorial__3-destination" src="img/tutorial__3-destination@2x.png"  width="46" />
               <h2>
                 An Uber will pick them up and bring them to you.
               </h2>
@@ -620,29 +610,16 @@
     </section>
 
 		<script>
-			var staticPath = '{% static "img/" %}';
+			var staticPath = 'img/';
 		</script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/hideseek/0.6.2/jquery.hideseek.min.js"></script>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hideseek/0.6.2/jquery.hideseek.min.js"></script>
 
-    <script src="{% static "js/index.js" %}"></script>
-    <script src="{% static "js/form.js"%}"></script>
-    <script src="{% static "js/mailchimp.js" %}"></script>
+    <script src="js/index.js"></script>
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-68866205-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
   </body>
 </html>

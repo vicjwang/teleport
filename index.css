@@ -1,0 +1,1213 @@
+input[type='text'],
+input[type='number'],
+textarea {
+  font-size: 16px; }
+
+.vertical-align {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.center {
+  margin: 0 auto;
+  text-align: center; }
+
+.right {
+  text-align: right; }
+
+.no-scroll {
+  overflow: hidden; }
+
+*, html, body {
+  font-size: 14px;
+  color: #939297;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans','Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+h1, h2 {
+  font-size: 32px;
+  font-weight: 100;
+  color: #272530; }
+  @media screen and (max-width: 768px) {
+    h1, h2 {
+      font-size: 24px;
+      font-weight: 300; } }
+
+h3 {
+  font-size: 13px;
+  font-weight: 300;
+  color: #272530; }
+
+p {
+  font-size: 14px;
+  color: #939297; }
+
+a, a:visited {
+  color: #00fca6; }
+
+a:hover, a:focus {
+  color: #00e395; }
+
+section {
+  display: block;
+  position: relative;
+  min-height: 100vh; }
+
+.section-dark {
+  background-color: #272530;
+  background-image: url(./img/bg-dark.gif);
+  background-position: 0 50%;
+  background-repeat-y: no-repeat; }
+  .section-dark h1, .section-dark h2 {
+    color: white; }
+  .section-dark p {
+    color: #b6b7b9; }
+
+.section-grey {
+  background-color: #eaeaeb; }
+
+.button, .button:visited {
+  margin-top: 16px;
+  display: inline-block;
+  margin: 0;
+  padding: 16px 32px;
+  border-radius: 8px;
+  background-color: #fd8586;
+  color: white;
+  transition: background-color .1s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none; }
+  .button:hover, .button:visited:hover {
+    background-color: #eb6465;
+    text-decoration: none;
+    color: white; }
+
+.button-green {
+  background-color: #06dd93; }
+  .button-green:hover {
+    background-color: #14b57e; }
+
+.button-apple {
+  background-image: url(./img/_external/apple.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 30px;
+  background-position: 24px 40%;
+  padding-left: 56px; }
+
+.button-confirm {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-image: url(./img/button-complete@2x.png);
+  background-size: contain;
+  display: block;
+  font-size: 0;
+  text-indent: -9999999em; }
+
+.button-giant {
+  position: fixed;
+  width: 95%;
+  left: 0;
+  bottom: 1.5%;
+  margin: 0;
+  margin-left: 2.5%;
+  padding: 18px 0;
+  z-index: 1; }
+
+.button.disabled, .button:disabled {
+  background: #939297;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: .7; }
+
+/* ==========================================================================
+   Preload styles
+   ========================================================================== */
+#preload {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background: #272530;
+  overflow: hidden;
+  -webkit-animation-name: preload;
+          animation-name: preload;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+  #preload .preload__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+    width: 120px;
+    height: 134px; }
+    #preload .preload__logo svg {
+      width: 120px;
+      height: 134px; }
+  #preload.visible {
+    -webkit-animation: none !important;
+            animation: none !important; }
+
+@-webkit-keyframes preload {
+  0% {
+    opacity: 1;
+    display: block; }
+
+  99% {
+    opacity: 0;
+    display: block; }
+
+  100% {
+    opacity: 0;
+    display: none; } }
+
+@keyframes preload {
+  0% {
+    opacity: 1;
+    display: block; }
+
+  99% {
+    opacity: 0;
+    display: block; }
+
+  100% {
+    opacity: 0;
+    display: none; } }
+/* ==========================================================================
+   Slideshow
+   ========================================================================== */
+.slideshow {
+  position: relative; }
+  .slideshow > .slideshow__child {
+    display: none; }
+  .slideshow > .slideshow__child.active {
+    display: block; }
+
+.slideshow__paginator-next, .slideshow__paginator-prev {
+  z-index: 1;
+  transition: opacity .3s,-webkit-transform .3s;
+  transition: opacity .3s,transform .3s;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 20%;
+  top: 0;
+  background-size: 24px 64px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: .5;
+  display: block;
+  font-size: 0;
+  text-indent: -9999999em; }
+  .slideshow__paginator-next:hover, .slideshow__paginator-prev:hover {
+    opacity: 1; }
+  .slideshow__paginator-next:active, .slideshow__paginator-prev:active {
+    -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px); }
+  .slideshow__paginator-next.hidden, .slideshow__paginator-prev.hidden {
+    pointer-events: none;
+    opacity: 0; }
+
+.slideshow__paginator-next {
+  background-image: url(./img/tutorial__right@2x.png);
+  right: 0;
+  background-position: 90% 50%; }
+
+.slideshow__paginator-prev {
+  background-image: url(./img/tutorial__left@2x.png);
+  left: 0;
+  background-position: 10% 50%; }
+
+/* ==========================================================================
+   Intro
+   ========================================================================== */
+.logo {
+  display: block;
+  margin: 0 auto;
+  background-image: url(./img/logo.svg);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 74px;
+  display: block;
+  font-size: 0;
+  text-indent: -9999999em; }
+
+#intro {
+  overflow: hidden;
+  height: 95vh; }
+  #intro h1 {
+    display: block;
+    margin: 0;
+    padding: 24px 0;
+    text-align: center; }
+    #intro h1 a {
+      width: 64px;
+      height: 74px; }
+      @media screen and (max-width: 768px) {
+        #intro h1 a {
+          width: 32px;
+          height: 37px; } }
+  #intro .intro__android {
+    display: inline-block;
+    margin-left: 8px; }
+  #intro ul {
+    padding: 16px 8px;
+    display: block;
+    text-align: right; }
+    #intro ul li {
+      display: inline-block;
+      margin: 0 16px;
+      line-height: 74px; }
+      #intro ul li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+  #intro .intro__menutoggle {
+    width: 32px;
+    height: 32px;
+    background-image: url(./img/intro__hamburger@2x.png);
+    background-size: 32px 64px;
+    background-position: 0 0;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 11;
+    display: block;
+    font-size: 0;
+    text-indent: -9999999em;
+    display: none; }
+    #intro .intro__menutoggle.toggle {
+      background-position: 0 -32px; }
+  @media screen and (max-width: 768px) {
+    #intro ul {
+      position: fixed;
+      background-color: rgba(39, 37, 48, 0);
+      z-index: 10;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: background 0.5s, opacity 0.5s; }
+      #intro ul li {
+        width: 100%;
+        margin: 0;
+        text-align: center; }
+        #intro ul li:first-child {
+          margin-top: 96px; }
+        #intro ul li a {
+          font-size: 32px;
+          font-weight: 100;
+          color: #272530;
+          color: white; } }
+      @media screen and (max-width: 768px) and (max-width: 768px) {
+        #intro ul li a {
+          font-size: 24px;
+          font-weight: 300; } }
+  @media screen and (max-width: 768px) {
+      #intro ul.visible {
+        display: block;
+        opacity: 1;
+        height: 100vh;
+        background-color: rgba(39, 37, 48, 0.95); }
+    #intro .intro__menutoggle {
+      display: block; } }
+  #intro .intro__bg {
+    pointer-events: none;
+    opacity: .5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; }
+    #intro .intro__bg > div {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      background-size: 1341px 480px;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-perspective: 1000;
+              perspective: 1000; }
+    #intro .intro__bg .intro__bg-1 {
+      height: 200%;
+      background-image: url(./img/intro__stars-100@2x.png); }
+    #intro .intro__bg .intro__bg-2 {
+      height: 200%;
+      background-image: url(./img/intro__stars-30@2x.png); }
+    #intro .intro__bg .intro__bg-3 {
+      height: 200%;
+      background-image: url(./img/intro__stars-10@2x.png);
+      -webkit-animation-name: intro__bg;
+              animation-name: intro__bg;
+      -webkit-animation-duration: 50s;
+              animation-duration: 50s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite; }
+    #intro .intro__bg .intro__bg-cover {
+      height: 100%;
+      background-image: url(./img/bg-darkfade.png);
+      background-repeat-y: no-repeat;
+      background-size: 1px 344px;
+      background-position: 50% 100%; }
+  #intro .intro__planet {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    background-image: url(./img/intro__planet@2x.png);
+    background-repeat: no-repeat;
+    background-size: 591px 152px;
+    background-position: 50% 100%;
+    width: 100%;
+    height: 100%; }
+    #intro .intro__planet::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-image: url(./img/intro__planet-friend@2x.png);
+      background-repeat: no-repeat;
+      background-size: 591px 152px;
+      background-position: 50% 100%; }
+    #intro .intro__planet::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-left: -60px;
+      bottom: 70px;
+      opacity: .85;
+      background-size: 40px 692px;
+      background-image: url(./img/intro__beam@2x.png);
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-perspective: 1000;
+              perspective: 1000;
+      -webkit-transform: translate3d(0, 0, 0) scaleX(0);
+              transform: translate3d(0, 0, 0) scaleX(0); }
+  #intro .intro__arrow {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    bottom: 24px;
+    left: 50%;
+    margin-left: -50px;
+    background-image: url(./img/intro__arrow@2x.png);
+    background-size: 64px 24px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 48px;
+    opacity: .75;
+    transition: opacity .3s;
+    display: block;
+    font-size: 0;
+    text-indent: -9999999em; }
+    #intro .intro__arrow:hover {
+      opacity: 1; }
+  #intro .intro__demo {
+    position: relative;
+    height: 50vh; }
+    @media screen and (max-width: 768px) {
+      #intro .intro__demo {
+        display: none; } }
+    #intro .intro__demo .intro__ui {
+      position: relative;
+      width: 524px;
+      max-width: 100%;
+      height: 100%;
+      background-image: url(./img/intro__ui@2x.png);
+      background-size: contain;
+      background-position: 50% 50%;
+      background-repeat: no-repeat; }
+      #intro .intro__demo .intro__ui::after {
+        position: absolute;
+        top: 0;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-image: url(./img/intro__ui-highlight@2x.png);
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat; }
+    #intro .intro__demo .intro__touch {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      top: 48px;
+      left: 100px;
+      opacity: 0;
+      background-image: url(./img/intro__touch@2x.png);
+      background-size: 130px 130px;
+      background-repeat: no-repeat;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-perspective: 1000;
+              perspective: 1000; }
+  #intro.focus .intro__bg-1 {
+    -webkit-animation-name: intro__bg;
+            animation-name: intro__bg;
+    -webkit-animation-duration: 150s;
+            animation-duration: 150s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  #intro.focus .intro__bg-2 {
+    -webkit-animation-name: intro__bg;
+            animation-name: intro__bg;
+    -webkit-animation-duration: 100s;
+            animation-duration: 100s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  #intro.focus .intro__bg-3 {
+    -webkit-animation-name: intro__bg;
+            animation-name: intro__bg;
+    -webkit-animation-duration: 50s;
+            animation-duration: 50s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  #intro.focus .intro__planet::after {
+    -webkit-animation-name: intro__planet-friend;
+            animation-name: intro__planet-friend;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
+  #intro.focus .intro__planet::before {
+    -webkit-animation-name: intro__beam;
+            animation-name: intro__beam;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
+  #intro.focus .intro__arrow {
+    -webkit-animation-name: intro__arrow;
+            animation-name: intro__arrow;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  #intro.focus .intro__demo .intro__ui::after {
+    -webkit-animation-name: intro__ui-highlight;
+            animation-name: intro__ui-highlight;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  #intro.focus .intro__demo .intro__touch {
+    -webkit-animation-name: intro__touch;
+            animation-name: intro__touch;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+
+@-webkit-keyframes intro__bg {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+
+  100% {
+    -webkit-transform: translateY(-480px);
+            transform: translateY(-480px); } }
+
+@keyframes intro__bg {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+
+  100% {
+    -webkit-transform: translateY(-480px);
+            transform: translateY(-480px); } }
+@-webkit-keyframes intro__arrow {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+
+  50% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0); }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+@keyframes intro__arrow {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+
+  50% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0); }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+@-webkit-keyframes intro__touch {
+  0% {
+    top: 260px;
+    left: 300px;
+    opacity: 0; }
+
+  75% {
+    top: 48px;
+    left: 100px;
+    opacity: .5; }
+
+  80% {
+    top: 48px;
+    left: 100px;
+    opacity: .5; }
+
+  85% {
+    top: 48px;
+    left: 100px;
+    opacity: 1; }
+
+  100% {
+    top: 48px;
+    left: 100px;
+    opacity: 0; } }
+@keyframes intro__touch {
+  0% {
+    top: 260px;
+    left: 300px;
+    opacity: 0; }
+
+  75% {
+    top: 48px;
+    left: 100px;
+    opacity: .5; }
+
+  80% {
+    top: 48px;
+    left: 100px;
+    opacity: .5; }
+
+  85% {
+    top: 48px;
+    left: 100px;
+    opacity: 1; }
+
+  100% {
+    top: 48px;
+    left: 100px;
+    opacity: 0; } }
+@-webkit-keyframes intro__ui-highlight {
+  0% {
+    opacity: 0; }
+
+  70% {
+    opacity: 0; }
+
+  75% {
+    opacity: 1; }
+
+  80% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+@keyframes intro__ui-highlight {
+  0% {
+    opacity: 0; }
+
+  70% {
+    opacity: 0; }
+
+  75% {
+    opacity: 1; }
+
+  80% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes intro__beam {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); }
+
+  25% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+
+  75% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); } }
+@keyframes intro__beam {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); }
+
+  25% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+
+  75% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); } }
+@-webkit-keyframes intro__planet-friend {
+  0% {
+    opacity: 0; }
+
+  25% {
+    opacity: 0; }
+
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: 1; } }
+@keyframes intro__planet-friend {
+  0% {
+    opacity: 0; }
+
+  25% {
+    opacity: 0; }
+
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: 1; } }
+/* ==========================================================================
+   Tutorial styles
+   ========================================================================== */
+#tutorial {
+  overflow: hidden; }
+  #tutorial h2 {
+    transition: color .5s; }
+  #tutorial::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image: url(./img/tutorial__3-map.jpg);
+    background-size: cover;
+    opacity: 0;
+    transition: opacity .5s; }
+  #tutorial .container {
+    position: relative; }
+    #tutorial .container .row {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .5s, -webkit-transform .5s;
+      transition: opacity .5s, transform .5s; }
+      #tutorial .container .row.next {
+        -webkit-transform: translate(50%, 0);
+                transform: translate(50%, 0); }
+      #tutorial .container .row.prev {
+        -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0); }
+      #tutorial .container .row.active {
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+        opacity: 1;
+        pointer-events: auto; }
+  #tutorial .tutorial__paginator-next, #tutorial .tutorial__paginator-prev {
+    z-index: 1;
+    transition: opacity .3s,-webkit-transform .3s;
+    transition: opacity .3s,transform .3s;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 20%;
+    top: 0;
+    background-size: 24px 64px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: .5;
+    display: block;
+    font-size: 0;
+    text-indent: -9999999em; }
+    #tutorial .tutorial__paginator-next:hover, #tutorial .tutorial__paginator-prev:hover {
+      opacity: 1; }
+    #tutorial .tutorial__paginator-next:active, #tutorial .tutorial__paginator-prev:active {
+      -webkit-transform: translate(0, 10px);
+              transform: translate(0, 10px); }
+    #tutorial .tutorial__paginator-next.hidden, #tutorial .tutorial__paginator-prev.hidden {
+      pointer-events: none;
+      opacity: 0; }
+  #tutorial .tutorial__paginator-next {
+    background-image: url(./img/tutorial__right@2x.png);
+    right: 0;
+    background-position: 90% 50%; }
+  #tutorial .tutorial__paginator-prev {
+    background-image: url(./img/tutorial__left@2x.png);
+    left: 0;
+    background-position: 10% 50%; }
+  #tutorial .tutorial__progress ul {
+    z-index: 1;
+    width: 240px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    text-align: center;
+    margin: 0; }
+    @media screen and (max-width: 768px) {
+      #tutorial .tutorial__progress ul {
+        bottom: 72px; } }
+    #tutorial .tutorial__progress ul li {
+      cursor: pointer;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin: 8px;
+      border-radius: 8px;
+      opacity: .5;
+      background: #e8e8e8;
+      transition: opacity .3s, background-color .3s; }
+      #tutorial .tutorial__progress ul li:hover {
+        opacity: 1; }
+      #tutorial .tutorial__progress ul li.active {
+        background-color: #939297;
+        opacity: .5; }
+  #tutorial .tutorial__content-inner {
+    height: 95vh;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0);
+    transition: all .5s; }
+    @media screen and (max-width: 768px) {
+      #tutorial .tutorial__content-inner {
+        height: 80vh; } }
+    #tutorial .tutorial__content-inner .tutorial__illustration {
+      position: relative; }
+  #tutorial .tutorial__content-1 svg {
+    position: absolute;
+    left: 50%;
+    margin-left: -28px;
+    top: 26px;
+    -webkit-transform: scale(1.36);
+            transform: scale(1.36); }
+  #tutorial .tutorial__content-1 .tutorial__illustration {
+    background-image: url(./img/tutorial__1-friends.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 200px;
+    width: 360px;
+    margin: 0 auto; }
+    @media screen and (max-width: 768px) {
+      #tutorial .tutorial__content-1 .tutorial__illustration {
+        -webkit-transform: translate(-22%, 0) scale(0.75);
+                transform: translate(-22%, 0) scale(0.75); } }
+    #tutorial .tutorial__content-1 .tutorial__illustration::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-image: url(./img/tutorial__1-arrow.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      opacity: 0;
+      transition: opacity 0; }
+  #tutorial .tutorial__content-1.animated .tutorial__illustration::after {
+    opacity: 1;
+    transition: opacity .3s; }
+  #tutorial .tutorial__content-3 .tutorial__3-location, #tutorial .tutorial__content-3 .tutorial__3-destination {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0;
+    transition-delay: 0; }
+  #tutorial .tutorial__content-3 .tutorial__3-location {
+    left: 0px;
+    bottom: 188px; }
+    @media screen and (max-width: 768px) {
+      #tutorial .tutorial__content-3 .tutorial__3-location {
+        left: -50px; } }
+  #tutorial .tutorial__content-3 .tutorial__3-destination {
+    left: 200px;
+    bottom: 84px; }
+  #tutorial .tutorial__content-3.animated .tutorial__3-location, #tutorial .tutorial__content-3.animated .tutorial__3-destination {
+    opacity: 1;
+    transition: opacity .5s;
+    transition-delay: 1s; }
+  #tutorial .tutorial__content-3.animated .tutorial__3-destination {
+    transition-delay: 1.5s; }
+  #tutorial .tutorial__planets {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: translate(0, -50px);
+            transform: translate(0, -50px);
+    transition: -webkit-transform .5s, opacity .5s;
+    transition: transform .5s, opacity .5s; }
+    #tutorial .tutorial__planets .tutorial__planets-saturn {
+      background-image: url(./img/tutorial__2-saturn@2x.png);
+      width: 164px;
+      height: 164px;
+      position: absolute;
+      top: -40px;
+      left: 180px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-filter: blur(5px);
+              filter: blur(5px); }
+      @media screen and (max-width: 768px) {
+        #tutorial .tutorial__planets .tutorial__planets-saturn {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5); } }
+    #tutorial .tutorial__planets .tutorial__planets-phone {
+      background-image: url(./img/tutorial__2-screen@2x.png);
+      width: 531px;
+      height: 540px;
+      position: absolute;
+      bottom: -20px;
+      left: -140px;
+      background-size: contain;
+      background-repeat: no-repeat; }
+      @media screen and (max-width: 768px) {
+        #tutorial .tutorial__planets .tutorial__planets-phone {
+          width: 400px;
+          left: -220px;
+          bottom: -100px; } }
+    #tutorial .tutorial__planets .tutorial__planets-moon {
+      background-image: url(./img/tutorial__2-moon@2x.png);
+      width: 181px;
+      height: 181px;
+      position: absolute;
+      bottom: -60px;
+      left: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-filter: blur(2px);
+              filter: blur(2px); }
+      @media screen and (max-width: 768px) {
+        #tutorial .tutorial__planets .tutorial__planets-moon {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5); } }
+    #tutorial .tutorial__planets .tutorial__planets-mars {
+      background-image: url(./img/tutorial__2-mars@2x.png);
+      width: 81px;
+      height: 80px;
+      position: absolute;
+      bottom: 200px;
+      right: 100px;
+      background-size: contain;
+      background-repeat: no-repeat; }
+      @media screen and (max-width: 768px) {
+        #tutorial .tutorial__planets .tutorial__planets-mars {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5); } }
+  #tutorial.map::after {
+    opacity: 1; }
+  #tutorial.map h2 {
+    color: #ffffff; }
+  #tutorial.map .tutorial__progress ul li.active {
+    background-color: #ffffff;
+    opacity: 0.8; }
+  #tutorial.planets .tutorial__planets {
+    opacity: .35;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+    #tutorial.planets .tutorial__planets .tutorial__planets-saturn {
+      -webkit-animation-name: intro__arrow;
+              animation-name: intro__arrow;
+      -webkit-animation-duration: 8s;
+              animation-duration: 8s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-delay: -3s;
+              animation-delay: -3s; }
+    #tutorial.planets .tutorial__planets .tutorial__planets-phone {
+      -webkit-animation-name: intro__arrow;
+              animation-name: intro__arrow;
+      -webkit-animation-duration: 12s;
+              animation-duration: 12s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite; }
+    #tutorial.planets .tutorial__planets .tutorial__planets-moon {
+      -webkit-animation-name: intro__arrow;
+              animation-name: intro__arrow;
+      -webkit-animation-duration: 6s;
+              animation-duration: 6s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-delay: -2s;
+              animation-delay: -2s; }
+    #tutorial.planets .tutorial__planets .tutorial__planets-mars {
+      -webkit-animation-name: intro__arrow;
+              animation-name: intro__arrow;
+      -webkit-animation-duration: 7s;
+              animation-duration: 7s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-delay: -5s;
+              animation-delay: -5s; }
+  #tutorial.focus .tutorial__content-inner {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+#faq__search {
+  background: #F1F1F1;
+  border: 0;
+  border-bottom: 1px solid #c6c6c6;
+  margin-bottom: 10px;
+  padding: 10px 0 10px 10px;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 16px 0;
+  outline: none; }
+
+#faq h3 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 100;
+  color: #939297; }
+
+.faq__questions {
+  margin-bottom: 48px; }
+
+.faq__question {
+  display: block;
+  text-align: left;
+  margin-bottom: 12px;
+  column-break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid-column;
+  display: table; }
+  .faq__question .faq__q {
+    display: block;
+    color: #939297; }
+    .faq__question .faq__q:hover {
+      color: #86858b;
+      cursor: pointer;
+      text-decoration: underline; }
+    .faq__question .faq__q::before {
+      content: '[+]';
+      display: inline-block;
+      float: left;
+      margin-right: 8px;
+      color: #fd8586; }
+  .faq__question .faq__a {
+    display: none;
+    width: 100%;
+    color: #272530;
+    background: #F1F1F1;
+    margin-top: 8px;
+    padding: 12px 12px 12px 24px; }
+    .faq__question .faq__a p {
+      color: #272530; }
+    .faq__question .faq__a ul li {
+      color: #272530;
+      list-style: disc outside none;
+      margin-left: 24px; }
+  .faq__question .faq__keywords {
+    display: none; }
+  .faq__question.active .faq__q {
+    font-style: italic;
+    color: #605f64; }
+    .faq__question.active .faq__q::before {
+      font-style: normal;
+      content: '[-]'; }
+  .faq__question.active .faq__a {
+    display: block; }
+
+/* ==========================================================================
+   Press
+   ========================================================================== */
+#press {
+  height: auto;
+  min-height: 0; }
+
+.press__quotes {
+  width: 80%;
+  margin: 72px auto 48px;
+  border: 4px solid #ffffff;
+  padding: 48px 96px;
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .press__quotes {
+      width: 100%;
+      padding: 16px 32px; }
+      .press__quotes h1 {
+        font-size: 18px; } }
+
+.press__logo {
+  margin-bottom: 72px;
+  display: block; }
+  .press__logo a {
+    display: block;
+    margin: 0 auto;
+    display: block;
+    font-size: 0;
+    text-indent: -9999999em;
+    width: 130px;
+    height: 65px;
+    background: url(./img/press__logos@2x.png);
+    background-size: 780px 130px;
+    margin-bottom: 24px; }
+    .press__logo a:hover {
+      background-position-y: -65px; }
+
+.press__logo-ud a {
+  background-position-x: 0; }
+
+.press__logo-lh a {
+  background-position-x: -130px; }
+
+.press__logo-ph a {
+  background-position-x: -260px; }
+
+.press__logo-ls a {
+  background-position-x: -390px; }
+
+.press__logo-bi a {
+  background-position-x: -520px; }
+
+.press__logo-ed a {
+  background-position-x: -650px; }
+
+/* ==========================================================================
+   footer
+   ========================================================================== */
+#footer {
+  height: auto;
+  min-height: 0;
+  padding: 64px 0 72px 0; }
+  #footer a.logo {
+    width: 96px;
+    height: 110px;
+    margin-bottom: 16px; }
+  @media screen and (max-width: 768px) {
+    #footer {
+      text-align: center; }
+      #footer .socialicon-parent {
+        text-align: center; } }
+
+.socialicon-parent {
+  text-align: right;
+  margin: 0;
+  padding: 0; }
+
+.socialicon {
+  display: block;
+  font-size: 0;
+  text-indent: -9999999em;
+  position: relative;
+  display: inline-block;
+  margin: 0 16px;
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: .5; }
+  .socialicon:hover {
+    opacity: 1; }
+
+.socialicon-tw {
+  background-image: url(./img/socialicon-tw@2x.png); }
+
+.socialicon-fb {
+  background-image: url(./img/socialicon-fb@2x.png); }
+
+.socialicon-in {
+  background-image: url(./img/socialicon-in@2x.png); }
